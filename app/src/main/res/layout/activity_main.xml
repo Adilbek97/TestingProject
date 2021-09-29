@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дата матча:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp" />
+    <TextView
+        android:id="@+id/tvDateVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дата матча:"
+        app:layout_constraintStart_toEndOf="@+id/tvDate"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp" />
+    <TextView
+        android:id="@+id/tvLiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Турнир:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp" />
+    <TextView
+        android:id="@+id/tvLigaVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Турнир:"
+        app:layout_constraintStart_toStartOf="@+id/tvDateVal"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Команды:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvScores"
+        app:layout_constraintTop_toBottomOf="@+id/tvLiga"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvTeam1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Командa1:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvScores"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeams"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tvTeam2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Командa2:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvScores"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeam1"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/tvScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Очки:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTeams"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLiga"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/tvScore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Очки:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTeams"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScores"
+        android:layout_marginTop="8dp" />
+    <TextView
+        android:id="@+id/tvScore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Очки:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTeams"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScore1"
+        android:layout_marginTop="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVideo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvScore2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
